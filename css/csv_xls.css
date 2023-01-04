@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+#csvTable{
+    display: none;
+}
+#xlsTable{
+    display: none;
+}
+form.search input[type=text] {
+    padding: 8px;
+    font-size: 17px;
+    border: 1px solid gray;
+    float: left;
+    width: 30%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+form.search button {
+    padding: 8px;
+    width: 10%;
+    float: left;
+    background-color: rgb(21, 167, 72);
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    border: 1px solid gray;
+    border-left: none;
+
+}
+
+form.search button:hover {
+    background-color: rgb(85, 82, 80);
+}
+
+.filessection {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#xlsbutton,
+#csvbutton {
+    margin: 2px;
+    width: 200px;
+}
+
+.csv_xlx_heading {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+#sorting_btn {
+    padding: 8px;
+    width: auto;
+    float: left;
+    background-color: rgb(39, 116, 216);
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    border: 1px solid gray;
+    border-left: none;
+    margin-left: 5%;
+}
+#csv_sorting_btn{
+    padding: 8px;
+    width: auto;
+    float: left;
+    background-color: rgb(39, 116, 216);
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    border: 1px solid gray;
+    border-left: none;
+    margin-left: 5%;
+}
+#csv_sorting_btn:hover{
+    background-color: gray;
+}
+#sorting_btn:hover {
+    background-color: rgb(85, 82, 80);
+}
+#csv_table_sec{
+    display: none;
+}
+#xlx_table_sec{
+    display: none;
+}

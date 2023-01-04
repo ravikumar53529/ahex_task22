@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="js/lib/jquery.slim.min.js"></script>
+    <script src="js/lib/popper.min.js"></script>
+    <script src="js/lib/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/student_registration.css"> 
+
+<body> 
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <div class="container">
+
+      
+      <a href="student_registration.html" class="navbar-brand"><img src="images/download.png" alt="ahexlogo" width="70px" height="50px" id="logo"></a>    
+    
+         <ul class="navbar-nav ml-auto">
+            <li class="navbar-item">
+                <a href="#" class="nav-link btn btn-secondary text-white btn1">Home</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="nav-link btn btn-secondary text-white btn1">About</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="nav-link btn btn-secondary text-white btn1">Register</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="nav-link btn btn-secondary  text-white btn1">Services</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="nav-link btn btn-secondary  text-white btn1">Logout</a>
+            </li>
+            
+         </ul>
+          
+        <ul class="nav nav-tabs nav-justified ml-auto" >
+            
+            <li>
+                <a href="studentdata_table.html" class="nav-link" target="_self"><i class="fa fa-table" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </a>
+           
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Home</a>
+                <a class="dropdown-item" href="#">About</a>
+                <a class="dropdown-item" href="studentdata_table.html">Student Table</a>
+                <a class="dropdown-item" href="#">Register</a>
+                <a class="dropdown-item" href="#">Logout</a>
+    
+             </div>
+              </li>
+          </ul>
+      </div>
+     
+      
+    </nav>
+     <header class="header">
+        <div class="row">
+            <div class="col-sm-12 ">
+                <h1 class="title text-white">Student Registration Form</h1>
+                <hr>
+            </div>
+
+        </div>
+       
+     
+     </header>
+     <section class="container" >
+       <form id="form">
+        <div class="row ">
+            <div class="col-sm-4 col-md-4 col-lg-4 ">
+                <label for="">Firstname</label><br>
+                <input type="text" class="form-control" name="firstname" id="fname">
+            </div>
+          
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <label for="">Lastname</label><br>
+                <input type="text" class="form-control" name="lastname" id="lname" ></div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <label for="">Surname</label><br>
+                <input type="text" class="form-control" name="Surname" id="sname" ></div>
+
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <label for="">Fathername</label><br>
+                <input type="text" class="form-control" name="fathername" id="fatname" >
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <label for="">Mothername</label><br>
+                <input type="text" class="form-control" name="mothername" id="motname" ></div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <label for="">Email</label><br>
+                <input type="email" class="form-control" name="email" id="email" ></div>
+
+        </div>
+        <div class="row ">
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label for="dob">Country code</label>
+                <select  id="countrycode" class="form-control" >
+                    <option value="+91-India">+91-India</option>
+                    <option value="+90-Turkey">+90-Turkey</option>
+                    <option value="+886-Taiwan">+886-Taiwan</option>
+                    <option value="+92-Pakistan">+92-Pakistan</option>
+                </select>
+                
+            </div>
+    
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label for="">Phonenumber</label><br>
+                <input type="number" class="form-control" name="phonenumber" id="phonenumber" placeholder="Phonenumber">
+                
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <label for="">Aadharnumber</label><br>
+                <input type="number" class="form-control" name="adharnum" id="adharnum" placeholder="Adharnumber"  maxlength="12"></div>
+          
+
+        </div>
+ 
+        <div class="row ">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <label for="">Gender</label><br>
+                
+                <div class="form-control">
+                    <input type="radio"  name="gender" id="male" value="Male" >  
+                    <label for="male">Male</label>
+                    <input type="radio"  name="gender" id="female" value="Female">
+                    <label for="female">Female</label>
+                    <input type="radio"  name="gender" id="others" value="Others">
+                    <label for="others">Others</label>
+                </div>
+                
+            </div>
+           
+            
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <label for="dob">Date of birth</label><br>
+            <input type="date"  name="dob" id="dob"  class="form-control">
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <label for="citzen">Citizen</label><br>
+                <select  id="citizen" class="form-control">
+                    <option value="India">India</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="India">India</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Pakistan">Pakistan</option>
+                </select>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <label for="">Studying</label><br>
+                <div class="form-control">
+                   
+                    <input type="radio"  name="study" id="field1" value="B.Tech"> 
+                    <label for="field1">B.Tech</label> 
+                    <input type="radio"  name="study" id="field2" value="M.Tech">
+                    <label for="field2">M.Tech</label>
+                    <input type="radio" name="study" id="field3" value="M.B.A">
+                    <label for="field3">M.B.A</label>
+                </div>
+               
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <fieldset>
+                    <legend>Current Address</legend>
+
+                   <textarea name="address" id="caddress" cols="50" rows="5" class="form-control"></textarea>
+                </fieldset>
+             
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <fieldset>
+                    <legend>Permanant Address</legend>
+                   <textarea name="peraddress" id="peraddress" cols="50" rows="5" class="form-control"></textarea>
+                </fieldset>
+            </div>    
+            
+        </div>
+        <div class="row ">
+            <div class="col-sm-3 col-md-3 col-lg-3 "> 
+              <label for="">SelfIntroduction</label><br>
+              <input type="file" name="selfintr" id="file1" class="form-control">
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3"> 
+                <label for="file2">Profile Pic</label><br>
+                <input type="file" name="pic" id="file2"  class="form-control">
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3"> 
+                <label for="file3">Adhar Card</label><br>
+                <input type="file" name="pic" id="file3"  class="form-control">
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3"> 
+                <label for="file4">Identity Card</label><br>
+                <input type="file" name="pic" id="file4"  class="form-control">
+            </div>
+            
+        </div>
+       <br>
+        <div class="row border border-dark"> 
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <input type="checkbox" name="termsandcond" id="termsandcond" >
+            <label for="termsandcond" class="text-primary">Terms and Conditions</label><br>
+          
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur laborum eum perferendis dignissimos fuga, cum dicta nihil adipisci dolorem dolorum! Quaerat totam iste sint a sunt, delectus assumenda fugiat! Fugit.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, aspernatur explicabo dolor harum possimus molestias.</p>
+        </div>
+        </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center ">
+                   <input type="submit"  class="btn-primary btn-lg" ></button>
+                   <input type="reset"  class="btn-dark btn-lg"value="Reset">
+            </div>
+        </div>
+          
+       </form>
+     </section>
+<!-- add tabs  -->
+
+       
+ <!--section-->
+ 
+
+</body>
+<script src="js/new_script_sample.js"></script>
+</html>

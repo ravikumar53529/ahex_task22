@@ -1,0 +1,18 @@
+Hi Mam,  
+
+Today I did the following
+
+Task Done: -
+	1) Today I have practiced, How to display multiple form data into our webpage
+          with table,from localstorage.
+          
+        2) I have practiced DOM selectors,document properties and js events.
+             
+Task In progress:-
+	1) Practice cache ,cookies and sessionstorage is in progress.
+      
+Task for Tomorrow :-
+	1)  practice JSON.
+
+Thanks Regards
+Ravikumar 

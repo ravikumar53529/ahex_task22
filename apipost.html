@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #dogs {
+        width: 500px;
+        height: 500px;
+        border: 1px solid rgb(111, 108, 108);
+        margin: 0px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <input
+        type="number"
+        name="idNumber"
+        id="idNumber"
+        placeholder="Enter ID here where to chnage"
+      /><br />
+      <input type="text" name="name" id="name" placeholder="title" />
+      <br />
+      <input type="text" name="body" id="body" placeholder="body" /><br />
+
+      <input type="submit" value="submit" />
+      <input type="reset" value="reset" />
+    </form>
+    <div>
+      <h1>After posting</h1>
+      <p id="updated_name"></p>
+      <p id="updated_body"></p>
+      <h1>After updating</h1>
+      <p id="update_name"></p>
+      <p id="update_body"></p>
+      <p></p>
+    </div>
+    <div id="dogs">
+      <img src="" alt="dogimages" id="dog_img" width="100%" height="500px" />
+    </div>
+
+    <script>
+      var form = document.getElementById("form");
+      form.addEventListener("submit", function (e) {
+        let name = document.getElementById("name").value;
+        let body = document.getElementById("body").value;
+        let idNumber = document.getElementById("idNumber").value;
+        let dogImages = document.getElementById("dog_img");
+        e.preventDefault();
+        alert(name + " " + body);
+        let date;
+
+        //POSTING DATA
+        fetch("https://jsonplaceholder.typicode.com/posts/", {
+          method: "POST",
+          body: JSON.stringify({
+            title: name,
+            body: body,
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            document.getElementById("updated_name").innerHTML = data.title;
+            document.getElementById("updated_body").innerHTML = data.body;
+          });
+        //updating data
+        fetch("https://jsonplaceholder.typicode.com/posts/1", {
+          method: "PUT",
+          body: JSON.stringify({
+            title: name,
+            body: body,
+          }),
+          headers: {
+            "Content-type": "application/json;charset=UTF-8",
+          },
+        })
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            document.getElementById("update_name").innerHTML = data.title;
+            document.getElementById("update_body").innerHTML = data.body;
+          });
+
+        //delete
+      });
+
+      //dogs
+
+      function dogFun() {
+        fetch("https://dog.ceo/api/breeds/image/random")
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            document.getElementById("dog_img").src = data.message;
+          });
+      }
+      window.setInterval(dogFun, 2000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/csv_xls.css"/>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"
+  />
+    <script src="js/lib/jquery.slim.min.js"></script>
+    <script src="js/lib/popper.min.js"></script>
+    <script src="js/lib/bootstrap.bundle.min.js"></script>
+    <script src="js/lib/papaparse.js"></script>
+    <script src="js/lib/xlsx_cdn.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"
+    />
+    <link rel="stylesheet" href="css/student_registration.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+      <!-- Brand -->
+      <a href="student_registration.html" class="navbar-brand"
+        ><img
+          src="images/download.png"
+          alt="ahexlogo"
+          width="70px"
+          height="50px"
+          id="logo"
+      /></a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+        <div class="tab nav navbar-nav ml-auto">
+          <ul class="navbar-nav ">
+            <li class="navbar-item">
+              <button
+                class="tablinks btn btn-secondary text-white"
+                onclick="openContent(event, 'Home')"
+                id="defaultOpen"
+              >
+                Home
+              </button>
+              <!-- <a
+                href="carousels.html"
+                class="nav-link btn btn-secondary text-white btn1"
+                >Home</a
+              > -->
+            </li>
+            <li class="navbar-item">
+              <button
+                class="tablinks btn btn-secondary text-white"
+                onclick="openContent(event, 'About')"
+              >
+                About
+              </button>
+              <!-- <a
+                href="about.html"
+                class="nav-link btn btn-secondary text-white btn1"
+                >About</a
+              > -->
+            </li>
+            <li class="navbar-item">
+              <button
+                class="tablinks btn btn-secondary text-white"
+                onclick="openContent(event, 'Registration')"
+              >
+                Register
+              </button>
+
+              <!-- <a
+                  href="student_registration.html"
+                  class="nav-link btn btn-secondary text-white btn1"
+                  >Register</a
+                > -->
+            </li>
+            <li class="navbar-item">
+              <button
+                class="tablinks btn btn-secondary text-white"
+                onclick="openContent(event, 'Services'),showData()"
+              >
+                Services
+              </button>
+              <!-- openContent(event, 'Services') -->
+              <!-- <a
+                  href="studentdata_table.html"
+                  class="nav-link btn btn-secondary text-white btn1"
+                  >Services</a
+                > -->
+            </li>
+            <li class="navbar-item">
+              <button
+                class="tablinks btn btn-secondary text-white"
+                onclick="openContent(event, 'Multipleaccount')"
+              >
+                Multiple Account
+              </button>
+
+              <!-- <a href="" class="nav-link btn btn-secondary text-white btn1"
+                  >Logout</a
+                > -->
+            </li>
+            <li class="navbar-item">
+              <button
+                class="tablinks btn btn-secondary text-white"
+                onclick="openContent(event, 'Login')"
+              >
+                Login
+              </button>
+
+              <!-- <a href="" class="nav-link btn btn-secondary text-white btn1"
+                  >Logout</a
+                > -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div id="Home" class="tabcontent">
+        <!-- home content-->
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+  
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="/images/pic4.jpg"
+                alt="Los Angeles"
+                width="100%"
+                height="500px"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/images/pic5.jpg"
+                alt="Chicago"
+                width="100%"
+                height="500px"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/pic3.jpg"
+                alt="New York"
+                width="100%"
+                height="500px"
+              />
+            </div>
+          </div>
+  
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+  
+        <!-- home content ends here -->
+      </div>
+       <!-- about starts here -->
+      <div id="About" class="tabcontent">
+       
+        <div class="container">
+          <img src="/images/pic2.jpg" alt="image" width="100%" height="100px" />
+        </div>
+        <div class="about-section">
+          <p>
+            Founded in July 2009, Ahex Technologies is an ISO 9001 certified
+            software development company. We are provider of customized web
+            application, mobile application and e-business solutions across the
+            globe. We provide required technical expertise which we have learned
+            after working on various web and mobile applications across different
+            business domain. We have a diverse portfolio which includes end to end
+            application development using different technologies which meets and
+            matches the client requirements.
+          </p>
+        </div>
+        
+      </div>
+       <!-- about ends here -->
+      <div id="Registration" class="tabcontent">
+        <!-- Registration starts here -->
+        <header class="header">
+          <div class="row">
+              <div class="col-sm-12 ">
+                  <h1 class="title text-white">Registration Form</h1>
+                  <hr>
+              </div>
+  
+          </div>
+         
+       
+       </header>
+       <section class="container" >
+         <form id="form">
+          <div class="row ">
+              <div class="col-sm-4 col-md-4 col-lg-4 ">
+                  <label for="">Firstname</label><br>
+                  <input type="text" class="form-control" name="firstname" id="fname" required>
+              </div>
+            
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                  <label for="">Lastname</label><br>
+                  <input type="text" class="form-control" name="lastname" id="lname" ></div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                  <label for="">Surname</label><br>
+                  <input type="text" class="form-control" name="Surname" id="sname" required></div>
+  
+          </div>
+          
+          <div class="row">
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                  <label for="">Fathername</label><br>
+                  <input type="text" class="form-control" name="fathername" id="fatname" required>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                  <label for="">Mothername</label><br>
+                  <input type="text" class="form-control" name="mothername" id="motname" ></div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                  <label for="">Email</label><br>
+                  <input type="email" class="form-control" name="email" id="email" required></div>
+  
+          </div>
+          <div class="row ">
+              <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label for="dob">Country code</label>
+                  <select  id="countrycode" class="form-control" required>
+                      <option value="+91-India">+91-India</option>
+                      <option value="+90-Turkey">+90-Turkey</option>
+                      <option value="+886-Taiwan">+886-Taiwan</option>
+                      <option value="+92-Pakistan">+92-Pakistan</option>
+                  </select>
+                  
+              </div>
+      
+              <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label for="">Phonenumber</label><br>
+                  <input type="number" class="form-control" name="phonenumber" id="phonenumber" placeholder="Phonenumber" required>
+                  
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <label for="">Aadharnumber</label><br>
+                  <input type="number" class="form-control" name="adharnum" id="adharnum" placeholder="Adharnumber"  maxlength="12" required>
+              </div>
+  
+          </div>
+   
+          <div class="row ">
+              <div class="col-md-12 col-sm-12 col-lg-4 col-xl-3">
+                  <label for="">Gender</label><br>
+                  
+                  <div class="form-control">
+                      <input type="radio"  name="gender" id="male" value="Male" >  
+                      <label for="male">Male</label>
+                      <input type="radio"  name="gender" id="female" value="Female">
+                      <label for="female">Female</label>
+                      <input type="radio"  name="gender" id="others" value="Others">
+                      <label for="others">Others</label>
+                  </div>
+                  
+              </div>
+             
+              
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+              <label for="dob">Date of birth</label><br>
+              <input type="date"  name="dob" id="dob"  class="form-control">
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+                  <label for="citizen">Citizen</label><br>
+                  <select  id="citizen" class="form-control" required>
+                      <option value="India">India</option>
+                      <option value="Turkey">Turkey</option>
+                      <option value="Taiwan">Taiwan</option>
+                      <option value="Pakistan">Pakistan</option>
+                      <option value="India">India</option>
+                      <option value="Turkey">Turkey</option>
+                      <option value="Taiwan">Taiwan</option>
+                      <option value="Pakistan">Pakistan</option>
+                  </select>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+                  <label for="">Studying</label><br>
+                  <div class="form-control">
+                     
+                      <input type="radio"  name="study" id="field1" value="B.Tech"> 
+                      <label for="field1">B.Tech</label> 
+                      <input type="radio"  name="study" id="field2" value="M.Tech">
+                      <label for="field2">M.Tech</label>
+                      <input type="radio" name="study" id="field3" value="M.B.A">
+                      <label for="field3">M.B.A</label>
+                  </div>
+                 
+              </div>
+              
+          </div>
+          
+          <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                  <fieldset>
+                      <legend>Current Address</legend>
+  
+                     <textarea name="address" id="caddress" cols="50" rows="5" class="form-control"></textarea>
+                  </fieldset>
+               
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                  <fieldset>
+                      <legend>Permanant Address</legend>
+                     <textarea name="peraddress" id="peraddress" cols="50" rows="5"  class="form-control"></textarea>
+                  </fieldset>
+              </div>    
+              
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12">
+            <fieldset>
+              <legend>Hobbies</legend>
+              <div class="form-control">
+                   <input type="checkbox" class="checkbox" name="hobby1" id="hobby1" value="Cricket">
+                   <label for="hobby1">Cricket</label>
+                   <input type="checkbox"  class="checkbox" name="hobby2" id="hobby2" value="Singing">
+                   <label for="hobby2">Singing</label>
+                   <input type="checkbox"  class="checkbox" name="hobby3" id="hobby3" value="Reading">
+                   <label for="hobby3">Reading</label>
+                   <input type="checkbox"  class="checkbox" name="hobby4" id="hobby4" value="Dancing">
+                   <label for="hobby4">Dancing</label>
+              
+              </div>
+            </fieldset>
+              </div>
+             
+            </div>
+          <div class="row ">
+              <div class="col-sm-12 col-md-12 col-lg-3 "> 
+                <label for="">SelfIntroduction</label><br>
+                <input type="file" name="selfintr" id="file1" class="form-control">
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-3"> 
+                  <label for="file2">Profile Pic</label><br>
+                  <input type="file" name="pic" id="file2"  class="form-control">
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-3"> 
+                  <label for="file3">Adhar Card</label><br>
+                  <input type="file" name="pic" id="file3"  class="form-control">
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-3"> 
+                  <label for="file4">Identity Card</label><br>
+                  <input type="file" name="pic" id="file4"  class="form-control">
+              </div>
+              
+          </div>
+         <br>
+         <!-- for data picker start -->
+         <div class="row">
+          <div class="col-sm-4 col-lg-4">
+           <label for="study_from">Study From</label>
+             <input type="date" name="study_from" id="study_from" class="form-control">
+          </div>
+          <div class="col-sm-4 col-lg-4">
+             <textarea name="" id="study_duration_comment" cols="10" rows="5" placeholder="Please mention comments here..." class="form-control"></textarea>
+          </div>
+          <div class="col-sm-4 col-lg-4">
+           <label for="study_to">Study To</label>
+           <input type="date" name="study_to" id="study_to" class="form-control">
+
+          </div>
+     </div>
+     
+     <!-- date picker end -->
+          <div class="row border border-dark"> 
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <input type="checkbox" name="termsandcond" id="termsandcond" >
+              <label for="termsandcond" class="text-primary">Terms and Conditions</label><br>
+            
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur laborum eum perferendis dignissimos fuga, cum dicta nihil adipisci dolorem dolorum! Quaerat totam iste sint a sunt, delectus assumenda fugiat! Fugit.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, aspernatur explicabo dolor harum possimus molestias.</p>
+          </div>
+          </div>
+              <div class="col-sm-12 col-md-12 col-lg-12 text-center ">
+                     <input type="submit"  class="btn-primary btn-lg" ></button>
+                     <input type="reset"  class="btn-dark btn-lg"value="Reset">
+              </div>
+          </div>
+            
+         </form>
+       </section>
+        <!-- Registration ends here -->
+      </div>
+      <div id="Services" class="tabcontent">
+  
+        <!-- Services Starts Here -->
+        <div class="container-fluid ">
+       
+          <div class="table-responsive">
+            <table class="table table-striped" id="myTable">
+              <tr>
+                <th>First_Name</th>
+                <th>Last_Name</th>
+                <th>Sur_Name</th>
+                <th>Father_Name</th>
+                <th>Mother_Name</th>
+                <th>Email_Id</th>
+                <th>Country_Code</th>
+                <th>Phone_Number</th>
+                <th>Aadhar_Number</th>
+                <th>Date_Of_Birth</th>
+                <th>Nationality</th>
+                <th>Current_Address</th>
+                <th>Permanant_Address</th>
+                <th>Gender</th>
+                <th>Study</th>
+                <th>Hobbies</th>
+                <th>Study_From_To</th>
+                 <th>Timestamp</th>
+                 <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            
+            </table>
+          </div>
+        
+          </div>
+      
+        </div>
+        
+          <!-- bootstrap popup-->
+          
+            
+            
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+            
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <!-- <h4 class="modal-title">Modal Heading</h4> -->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+            
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                   <!--form 
+                    -->
+                    <header class="header">
+                      <div class="row">
+                          <div class="col-sm-12 ">
+                              <h1 class="title text-white">Student Edit Form</h1>
+                              <hr>
+                          </div>
+              
+                      </div>
+                     
+                   
+                   </header>
+                   <section class="container" >
+                     <form id="editform">
+                      <div class="row ">
+                          <div class="col-sm-12">
+                              <label for="">Firstname</label><br>
+                              <input type="text" class="form-control" name="firstname" id="edit_fname" >
+                          </div>
+                        
+                          <div class="col-sm-12">
+                              <label for="">Lastname</label><br>
+                              <input type="text" class="form-control" name="lastname" id="edit_lname" ></div>
+                          <div class="col-sm-12">
+                              <label for="">Surname</label><br>
+                              <input type="text" class="form-control" name="Surname" id="edit_sname" ></div>
+              
+                      </div>
+                      
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <label for="">Fathername</label><br>
+                              <input type="text" class="form-control" name="fathername" id="edit_fathername" >
+                          </div>
+                          <div class="col-sm-12">
+                              <label for="">Mothername</label><br>
+                              <input type="text" class="form-control" name="mothername" id="edit_mothername" ></div>
+                          <div class="col-sm-12">
+                              <label for="">Email</label><br>
+                              <input type="email" class="form-control" name="email" id="edit_email" ></div>
+              
+                      </div>
+                      <div class="row ">
+                          <div class="col-sm-12">
+                              <label for="dob">Country code</label>
+                              <select  id="edit_countrycode" class="form-control" >
+                                  <option value="+91-India">+91-India</option>
+                                  <option value="+90-Turkey">+90-Turkey</option>
+                                  <option value="+886-Taiwan">+886-Taiwan</option>
+                                  <option value="+92-Pakistan">+92-Pakistan</option>
+                              </select>
+                              
+                          </div>
+                  
+                          <div class="col-sm-12">
+                              <label for="">Phonenumber</label><br>
+                              <input type="number" class="form-control" name="phonenumber" id="edit_phonenumber" placeholder="Phonenumber">
+                              
+                          </div>
+                          <div class="col-sm-12">
+                              <label for="">Aadharnumber</label><br>
+                              <input type="number" class="form-control" name="adharnum" id="edit_adharnum" placeholder="Adharnumber"  maxlength="12"></div>
+                        
+              
+                      </div>
+               
+                      <div class="row ">
+                          <div class="col-sm-12">
+                              <label for="">Gender</label><br>
+                              
+                              <div class="form-control">
+                                  <input type="radio"  name="gender" id="editmale" value="Male" >  
+                                  <label for="male">Male</label>
+                                  <input type="radio"  name="gender" id="edit_female" value="Female">
+                                  <label for="female">Female</label>
+                                  <input type="radio"  name="gender" id="edit_others" value="Others">
+                                  <label for="others">Others</label>
+                              </div>
+                              
+                          </div>
+                         
+                          
+                          <div class="col-sm-12">
+                          <label for="dob">Date of birth</label><br>
+                          <input type="date"  name="dob" id="edit_dob"  class="form-control">
+                          </div>
+                          <div class="col-sm-6">
+                              <label for="edit_citzen">Citizen</label><br>
+                              <select  id="edit_citizen" class="form-control">
+                                  <option value="India">India</option>
+                                  <option value="Turkey">Turkey</option>
+                                  <option value="Taiwan">Taiwan</option>
+                                  <option value="Pakistan">Pakistan</option>
+                                  <option value="India">India</option>
+                                  <option value="Turkey">Turkey</option>
+                                  <option value="Taiwan">Taiwan</option>
+                                  <option value="Pakistan">Pakistan</option>
+                              </select>
+                          </div>
+                          <div class="col-sm-12">
+                              <label for="">Studying</label><br>
+                              <div class="form-control">
+                                 
+                                  <input type="radio"  name="study" id="edit_field1" value="B.Tech"> 
+                                  <label for="field1">B.Tech</label> 
+                                  <input type="radio"  name="study" id="edit_field2" value="M.Tech">
+                                  <label for="field2">M.Tech</label>
+                                  <input type="radio" name="study" id="edit_field3" value="M.B.A">
+                                  <label for="field3">M.B.A</label>
+                              </div>
+                             
+                          </div>
+                          
+                      </div>
+                      
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <fieldset>
+                                  <legend>Current Address</legend>
+              
+                                 <textarea id="myText1" name="myText1"  cols="30" rows="10" class="form-control"></textarea>
+                              </fieldset>
+                           
+                          </div>
+                          <div class="col-sm-12">
+                              <fieldset>
+                                  <legend>Permanant Address</legend>
+                                  <textarea name="myText2" id="myText2" cols="30" rows="10" class="form-control"></textarea>
+                                 <!-- <textarea name="peraddress" id="edit_permanantaddress" cols="50" rows="5" class="form-control"></textarea> -->
+                              </fieldset>
+                          </div>    
+                          
+                      </div>
+                      <div class="row">
+                        <div  class="col-sm-12">
+                          <fieldset>
+                            <legend>Hobbies</legend>
+                           
+                            
+                              <div class="form-control">
+                                <input type="checkbox" class="edit_checkbox" name="edit_hobby1" id="edit_hobby1" value="Cricket">
+                                <label for="edit_hobby1">I like Cricket</label>
+                                <input type="checkbox"  class="edit_checkbox" name="edit_hobby2" id="edit_hobby2" value="Singing">
+                                <label for="edit_hobby2">I Like Singing</label>
+                              </div>
+                               <div  class="form-control">
+                                <input type="checkbox"  class="edit_checkbox" name="edit_hobby3" id="edit_hobby3" value="Reading">
+                                <label for="edit_hobby3"> I likeReading</label>
+                                <input type="checkbox"  class="edit_checkbox" name="edit_hobby4" id="edit_hobby4" value="Dancing">
+                                <label for="edit_hobby4">I like Dancing</label>
+                               </div>
+                                
+                              
+                          </fieldset>
+                        </div>
+                              </div>
+                         
+                      <div class="row ">
+                          <div class="col-sm-12 "> 
+                            <label for="">SelfIntroduction</label><br>
+                            <input type="file" name="selfintr" id="edit_file1" class="form-control">
+                          </div>
+                          <div class="col-sm-12"> 
+                              <label for="file2">Profile Pic</label><br>
+                              <input type="file" name="pic" id="edit_file2"  class="form-control">
+                          </div>
+                          <div class="col-sm-12"> 
+                              <label for="file3">Adhar Card</label><br>
+                              <input type="file" name="pic" id="edit_file3"  class="form-control">
+                          </div>
+                          <div class="col-sm-12"> 
+                              <label for="file4">Identity Card</label><br>
+                              <input type="file" name="pic" id="edit_file4"  class="form-control">
+                          </div>
+                          
+                      </div>
+                     <br>
+                    <!-- date picker starts -->
+                    <div class="row">
+                      <div class="col-sm-4 col-lg-4">
+                       <label for="edit_study_from">Study From</label>
+                         <input type="date" name="edit_study_from" id="edit_study_from" class="form-control">
+                      </div>
+                      <div class="col-sm-4 col-lg-4">
+                         <textarea name="" id="edit_study_duration_comment" cols="10" rows="5" placeholder="Please mention comments here..." class="form-control"></textarea>
+                      </div>
+                      <div class="col-sm-4 col-lg-4">
+                       <label for="study_to">Study To</label>
+                       <input type="date" name="edit_study_to" id="edit_study_to" class="form-control">
+                      </div>
+                    </div>
+                    <!-- date picker ends -->
+                      <div class="row border border-dark">
+                        <div class="col-sm-12">
+                          <span>
+                            <input type="checkbox" name="termsandcond" id="edit_termsandcond" >
+                            <p>I agree to the terms of Condition<span><sup class="text-danger">*</sup></span></p>
+                          </span>
+                        
+                          
+                      </div>
+                      </div>
+                          <div class="col-sm-12  text-center ">
+                                 <button type="button" onclick="updateData()" class="btn-primary btn-lg" data-dismiss="modal">update</button>
+                                 <input type="reset"  class="btn-dark btn-lg"value="Reset">
+                          </div>
+                      </div>
+                        
+                     </form>
+                   </section>
+            
+                </div>
+              </div>
+            </div>
+             
+        
+        <!-- Services Ends HERE -->
+       
+      </div>
+    <!-- multiple Acccount Starts here -->
+
+ <!-- about starts here -->
+<div id="Multipleaccount" class="tabcontent">
+       
+  <!-- <div class="container-fluid">
+  <img src="/images/pic2.jpg" alt="image" width="100%" height="100px" />
+  </div> -->
+  <!-- files here -->
+  <div container>
+    <div class="row">
+          <div class="col-sm-6 col-lg-6">
+            <div class="filessection">
+              <div class="csvsec">
+                <h3>CSV <span class="text-primary">FILE READER</span></h3>
+                <form id="csv_form">
+                 <label for="csv_file1" class="csv_xlx_heading">Upload CSV file Here</label><br>
+                 <input type="file" name="csv_file1" id="csv_file1" class="csv_xlx_btn" accept=".csv"><br>
+                 <input type="submit" value="Upload" class="btn btn-success" id="csvbutton">
+                </form>
+              </div>
+              <div class="xsvsec">
+                <h3>XLS&XLSX <span class="text-primary">FILE READER</span></h3>
+                <form id="xls_form">
+                 <label for="xls_file1"  class="csv_xlx_heading">Upload XLX & XLSX files Here</label><br>
+                 <input type="file" name="xls_file1" id="xlxfile1"  class="csv_xlx_btn" accept=".xlx,.xlsx"><br>
+                 <input type="submit" value="Upload" class="btn btn-primary" id="xlsbutton">
+                </form>
+              </div>
+             
+            </div>
+           
+          </div>
+          <div class="col-sm-6 col-lg-6">
+            <div class="container">
+              <img src="/images/png1.png" alt="readingpng" width="400px" height="350px">
+            </div>
+            
+          </div>
+    </div>
+  </div>
+  
+  <table class="table table-striped" id="xlsTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Place</th>
+        <th>Designation</th>
+        <th>Email</th>
+        <th>Phonenumber</th>
+        <th>Surname</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot>
+      <tr>
+        <th>Name</th>
+        <th>Place</th>
+        <th>Designation</th>
+        <th>Email</th>
+        <th>Phonenumber</th>
+        <th>Surname</th>
+      </tr>
+    </tfoot>
+  
+  </table> 
+ 
+
+   
+  <table class="table table-striped" id="csvTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>MATHS</th>
+        <th>SOCIAL</th>
+        <th>ENGLISH</th>
+        <th>TELUGU</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    <tfooter>
+      <tr>
+        <th>Name</th>
+        <th>MATHS</th>
+        <th>SOCIAL</th>
+        <th>ENGLISH</th>
+        <th>TELUGU</th>
+        
+      </tr>
+    </tfooter>
+  
+  </table>
+<!-- foooter starts -->
+ 
+<footer class="bg-dark text-center text-white">
+  <!-- grid container -->
+  <div class="container p-4">
+    <!-- social media -->
+    <section class="mb-4">
+      <!-- facebook -->
+      <a  class="btn btn-outline-light btn-floating m-1" href="" role="button">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <!-- twitter -->
+    <a class="btn btn-outline-light btn-floating m-1" href="" role="button">
+      <i class="fa fa-twitter" area-hidden="true"></i>
+    </a>
+    <!-- google -->
+    <a  class="btn btn-outline-light btn-floating m-1" href="" role="button">
+      <i class="fa fa-google" area-hidden="true">
+       </i>
+    </a>
+    <!-- instagram -->
+    <a  class="btn btn-outline-light btn-floating m-1" href="" role="button">
+      <i class="fa fa-instagram" area-hidden="true"></i>
+    </a>
+    <!-- linked-in -->
+    <a  class="btn btn-outline-light btn-floating m-1"href="" role="button">
+      <i class="fa fa-linkedin" area-hidden="true"></i>
+    </a>
+
+    <!-- github -->
+    <a  class="btn btn-outline-light btn-floating m-1" href="" role="button">
+      <i class="fa fa-github"></i>
+    </a>
+    </section>
+ 
+<!-- Section: Form -->
+<section class="">
+<form action="">
+<!--Grid row-->
+<div class="row d-flex justify-content-center">
+  <!--Grid column-->
+  <div class="col-auto">
+    <p class="pt-2">
+      <strong>Sign up for our newsletter</strong>
+    </p>
+  </div>
+  <!--Grid column-->
+
+  <!--Grid column-->
+  <div class="col-md-5 col-12">
+    <!-- Email input -->
+    <div class="form-outline form-white mb-4">
+      <input type="email" id="form5Example21" class="form-control" />
+      <label class="form-label" for="form5Example21">Email address</label>
+    </div>
+  </div>
+  <!--Grid column-->
+
+  <!--Grid column-->
+  <div class="col-auto">
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-outline-light mb-4">
+      Subscribe
+    </button>
+  </div>
+  <!--Grid column-->
+</div>
+<!--Grid row-->
+</form>
+</section>
+<!-- Section: Form -->
+
+<!-- section text -->
+<section class="mb-4">
+<p>Founded in July 2009, Ahex Technologies is an ISO 9001 certified software development company. We are provider of customized web application, mobile application and e-business solutions across the globe.</p>
+
+</section>
+
+<!-- secttion links  -->
+<section >
+<div class="row">
+   <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+    <h5 class="text-uppercase">Services</h5>
+    <ul class="list-unstyled mb-0">
+      <li>
+        <a class="text-white" href="">Frontend Development</a>
+      </li>
+      <li>
+        <a class="text-white" href="">Backend Development</a>
+      </li>
+      <li>
+        <a href="" class="text-white">Android Development</a>
+      </li>
+      <li>
+        <a href="" class="text-white">Fullstack Devlopment</a>
+      </li>
+
+    </ul>
+
+   </div>
+   <!-- grid column -->
+   <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+    <h5 class="text-uppercase">About Ahex</h5>
+    <ul class="list-unstyled mb-0">
+      <li>
+        <a class="text-white" href="">Photo gallery</a>
+      </li>
+      <li>
+        <a href="" class="text-white">Projects Info</a>
+      </li>
+      <li>
+        <a href="" class="text-white">Tesimonies</a>
+      </li>
+      <li>
+        <a href="" class="text-white">Employees</a>
+      </li>
+
+    </ul>
+
+   </div>
+   <!-- grid column -->
+   <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+    <h5 class="text-uppercase">Branches</h5>
+    <ul class="list-unstyled mb-0">
+      <li>
+        <a href="" class="text-white">Hyderabad</a>
+      </li>
+      <li>
+        <a href="" class="text-white">Delhi</a>
+      </li>
+      <li>
+        <a href="" class="text-white">USA</a>
+      </li>
+      <li>
+        <a href="" class="text-white">Banglore</a>
+      </li>
+    </ul> 
+
+   </div>
+   <!-- grid column -->
+
+   <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+    <h5 class="text-uppercase">Address</h5>
+    <ul class="list-unstyled mb-0">
+      <li><a href="" class="text-white">ph:+91-45555442212</a></li>
+    </ul>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.16379991568!2d78.38572241487726!3d17.451872488039964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb900ed933ff81%3A0xb79715aed0874331!2sAhex%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1668929508276!5m2!1sen!2sin" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
+
+</div>
+
+<!-- footer -->
+
+<div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2) ;">
+© 2022 Copyright:
+<a href="https://ahex.co/" class="text-white">Ahex Technologies</a>
+
+</div>
+
+
+</section>
+      
+
+     </div>
+    </form>
+
+   </section>
+
+
+
+
+
+
+  </div>
+</footer>
+<!-- footer ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- files end -->
+    <!-- <div id="csv_table_sec">
+      <div class="container-fluid ">
+       
+        <div class="table-responsive">
+          <div class="row search_table justify-content-end">
+            <div class="col-lg-12">
+                <form class="search" id="csv_search_form">
+                  <input type="text" name="searchcsvdata" id="searchcsvdata" placeholder="Search..">
+                  <button type="button"><i class="fa fa-search" id="csvSearchingbtn"></i></button>
+                  <input type="button" id="csv_sorting_btn" class="btn btn-success" value="Sorting Data" onclick="csvSorting()">
+                </form>
+            </div>
+            
+  
+          <table class="table table-striped" id="csvTable">
+            <tr>
+              <th>Name</th>
+              <th>MATHS</th>
+              <th>SOCIAL</th>
+              <th>ENGLISH</th>
+              <th>TELUGU</th>
+              
+            </tr>
+          
+          </table>
+             pagination -->
+             <!-- <ul class="pagination"> -->
+              <!-- <li class="page-item"><a class="page-link" href="#" id="csvprepage" onclick="csvPrevpage()">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#"  id="csvfirstpage" onclick="csvFirstpage()">1</a></li>
+              <li class="page-item"><a class="page-link" href="#" id="csvpage2" onclick="csvSecondpage()">2</a></li>
+              <li class="page-item"><a class="page-link" href="#"  id="csvpage3">3</a></li>
+              <li class="page-item"><a class="page-link" href="#" onclick="csvlastpage()">Next</a></li>
+            </ul>
+        </div>
+      
+        </div>
+     </div>
+    </div>  -->
+<!-- 
+        <div id="xlx_table_sec">
+          <div class="container-fluid ">
+        
+          </div>
+          <div class="table-responsive">
+            <div class="row search_table justify-content-end">
+              <div class="col-lg-12">
+                <div class="csvsearchbtn">
+                  <form class="search" id="xlx_seach_form">
+                    <input type="text" name="searchxsldata" id="searchxsldata" placeholder="Search..">
+                    <button type="button" id="xlxbutton"><i class="fa fa-search btncsv important"></i></button>
+                    <input type="button" id="sorting_btn"class="btn btn-success" value="Sorting Data" onclick="xlsxSorting()">
+                  </form>
+                 
+                </div>
+              </div>
+           
+     -->
+           
+              
+            
+  
+            <!-- pagination -->
+          <!--  
+              <ul class="pagination ">
+                <li class="page-item"><a class="page-link" id="xslxprepage" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" id="xlxfirstpage" onclick="xslFirstpage()" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" id="xslpage2" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" id="xslpage3" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+          
+           
+          </div>
+        
+          </div>
+          
+        </div>
+    
+  
+    </div>
+    
+  
+</div>
+ -->
+ <!-- about ends here -->
+
+<!--    Multiple Account Ends here -->
+      <div id="Login" class="tabcontent">
+     
+        <div class="row">
+          <div class="col-sm-6">
+                  <!-- login form -->
+                  <div class="container">
+                    <div class="loginform">
+                      <h3 class="text-dark text-center"  >Login Here</h3>
+                      <form action="">
+                        <label for="username" class="label">Username</label>
+                        <input
+                          type="text"
+                          name="username"
+                          id="username"
+                          class="fields"
+                        /><br />
+                        <label for="password" class="label">Password</label>
+                        <input
+                          type="password"
+                          name="password"
+                          id="password"
+                          class="fields"
+                        /><br />
+                        <input type="submit" value="Submit" class="btn1" />
+                        <input type="reset" value="Reset" class="btn1" />
+                      </form>
+                       <h3 class="text-center">or</h3>
+                       <div class="row">
+                        <div class="col-lg-12 p-3 text-center">
+                         <a href="" ><i class="fa fa-google fa-2x p-3"  style="color: red;"aria-hidden="true"></i></a> 
+                          <a href=""><i class="fa fa-facebook fa-2x p-3" style="color:blue;"aria-hidden="true"></i></a>
+                          <a href=""><i class="fa fa-github fa-2x p-3" style="color:rgb(36, 35, 35)"; aria-hidden="true"></i></a>
+                        </div>
+
+                       </div>
+                    </div>
+                    
+                  </div>
+             </div>
+             <div class="col-sm-6">
+ <!-- login form -->
+ <div class="container">
+  <div class="loginform">
+    <h3 class="text-dark text-center"  >Register Here</h3>
+    <form action="">
+      <label for="username" class="label">Username</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        class="fields"
+      /><br />
+      <label for="number" class="label">Phone number</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        class="fields"
+      /><br />
+      <label for="date" class="label">Date of birth</label>
+      <input
+        type="date"
+        name="username"
+        id="username"
+        class="fields"
+      /><br />
+      <label for="password" class="label">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="fields"
+      /><br />
+      <input type="submit" value="Submit" class="btn1" />
+      <input type="reset" value="Reset" class="btn1" />
+    </form>
+  </div>
+</div>
+</div>
+</div>
+      
+        <!-- login ends here -->
+        <!-- login ends here -->
+      </div>
+  
+      <script>
+        function openContent(evt, contentName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(contentName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+  
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+      </script>
+      <script src="js/new-script_sample.js"></script>
+      <!-- <script src="js/papaparse.js"></script> -->
+       <script src="js/xlxjsontotable.js"></script>
+       <script src="js/csvjsontable.js"></script>
+  </body>
+</html>

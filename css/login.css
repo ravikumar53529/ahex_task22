@@ -1,0 +1,43 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+.loginform{
+    width: 400px;
+    height: auto;
+    margin: 0px auto;
+  
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.fields{
+    width: 300px;
+    height: 40px;
+    border-radius:10px;
+    margin: 5px;
+    padding: 5px;
+    margin-left: 25px;
+
+}
+.fields:hover{
+    background-color: rgb(222, 231, 231);
+}
+.label{
+    font-size:20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     color: rgb(29, 32, 32);
+     margin-left:30px;
+}
+.btn1{
+    width: 100px;
+    height: 40px;
+    border-radius:10px;
+    padding:5px;
+    background-color: white;
+    margin-left:50px;
+    margin-top: 20px;
+}
+.btn1:hover{
+    background-color: rgb(180, 194, 194);
+}

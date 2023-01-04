@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student data table</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <script src="js/lib/jquery.slim.min.js"></script>
+    <script src="js/lib/popper.min.js"></script>
+    <script src="js/lib/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/student_registration.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+      <div class="container">
+  
+        
+        <a href="student_registration.html" class="navbar-brand"><img src="images/download.png" alt="ahexlogo" width="70px" height="50px" id="logo"></a>    
+      
+           <ul class="navbar-nav ml-auto">
+              <li class="navbar-item">
+                  <a href="carousels.html" class="nav-link btn btn-secondary text-white btn1">Home</a>
+              </li>
+              <li class="navbar-item">
+                  <a href="about.html" class="nav-link btn btn-secondary text-white btn1">About</a>
+              </li>
+              <li class="navbar-item">
+                  <a href="student_registration.html" class="nav-link btn btn-secondary text-white btn1">Register</a>
+              </li>
+              <li class="navbar-item">
+                  <a href="studentdata_table.html" class="nav-link btn btn-secondary  text-white btn1">Services</a>
+              </li>
+              <li class="navbar-item">
+                  <a href="" class="nav-link btn btn-secondary  text-white btn1">Logout</a>
+              </li>
+              
+           </ul>
+            
+          <ul class="nav nav-tabs nav-justified ml-auto" >
+              
+              <li>
+                  <a href="studentdata_table.html" class="nav-link" target="_self"><i class="fa fa-table" aria-hidden="true"></i></a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  <i class="fa fa-home" aria-hidden="true"></i>
+              </a>
+             
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Home</a>
+                  <a class="dropdown-item" href="#">About</a>
+                  <a class="dropdown-item" href="studentdata_table.html">Student Table</a>
+                  <a class="dropdown-item" href="#">Register</a>
+                  <a class="dropdown-item" href="#">Logout</a>
+      
+               </div>
+                </li>
+            </ul>
+        </div>
+       
+        
+      </nav>
+    <!--section-->
+    <div class="container-fluid ">
+     
+      <div class="table-responsive">
+        <table class="table table-striped" id="myTable">
+          <tr>
+            <th>First_Name</th>
+            <th>Last_Name</th>
+            <th>Sur_Name</th>
+            <th>Father_Name</th>
+            <th>Mother_Name</th>
+            <th>Email_Id</th>
+            <th>Country_Code</th>
+            <th>Phone_Number</th>
+            <th>Aadhar_Number</th>
+            <th>Date_Of_Birth</th>
+            <th>Nationality</th>
+            <th>Current_Address</th>
+            <th>Permanant_Address</th>
+            <th>Gender</th>
+            <th>Study</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        
+        </table>
+      </div>
+    
+      </div>
+  
+    </div>
+    
+      <!-- bootstrap popup-->
+      
+        
+        
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <!-- <h4 class="modal-title">Modal Heading</h4> -->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+               <!--form 
+                -->
+                <header class="header">
+                  <div class="row">
+                      <div class="col-sm-12 ">
+                          <h1 class="title text-white">Student Edit Form</h1>
+                          <hr>
+                      </div>
+          
+                  </div>
+                 
+               
+               </header>
+               <section class="container" >
+                 <form id="editform">
+                  <div class="row ">
+                      <div class="col-sm-12">
+                          <label for="">Firstname</label><br>
+                          <input type="text" class="form-control" name="firstname" id="edit_fname" >
+                      </div>
+                    
+                      <div class="col-sm-12">
+                          <label for="">Lastname</label><br>
+                          <input type="text" class="form-control" name="lastname" id="edit_lname" ></div>
+                      <div class="col-sm-12">
+                          <label for="">Surname</label><br>
+                          <input type="text" class="form-control" name="Surname" id="edit_sname" ></div>
+          
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <label for="">Fathername</label><br>
+                          <input type="text" class="form-control" name="fathername" id="edit_fathername" >
+                      </div>
+                      <div class="col-sm-12">
+                          <label for="">Mothername</label><br>
+                          <input type="text" class="form-control" name="mothername" id="edit_mothername" ></div>
+                      <div class="col-sm-12">
+                          <label for="">Email</label><br>
+                          <input type="email" class="form-control" name="email" id="edit_email" ></div>
+          
+                  </div>
+                  <div class="row ">
+                      <div class="col-sm-12">
+                          <label for="dob">Country code</label>
+                          <select  id="edit_countrycode" class="form-control" >
+                              <option value="+91-India">+91-India</option>
+                              <option value="+90-Turkey">+90-Turkey</option>
+                              <option value="+886-Taiwan">+886-Taiwan</option>
+                              <option value="+92-Pakistan">+92-Pakistan</option>
+                          </select>
+                          
+                      </div>
+              
+                      <div class="col-sm-12">
+                          <label for="">Phonenumber</label><br>
+                          <input type="number" class="form-control" name="phonenumber" id="edit_phonenumber" placeholder="Phonenumber">
+                          
+                      </div>
+                      <div class="col-sm-12">
+                          <label for="">Aadharnumber</label><br>
+                          <input type="number" class="form-control" name="adharnum" id="edit_adharnum" placeholder="Adharnumber"  maxlength="12"></div>
+                    
+          
+                  </div>
+           
+                  <div class="row ">
+                      <div class="col-sm-12">
+                          <label for="">Gender</label><br>
+                          
+                          <div class="form-control">
+                              <input type="radio"  name="gender" id="edit_male" value="Male" >  
+                              <label for="male">Male</label>
+                              <input type="radio"  name="gender" id="edit_female" value="Female">
+                              <label for="female">Female</label>
+                              <input type="radio"  name="gender" id="edit_others" value="Others">
+                              <label for="others">Others</label>
+                          </div>
+                          
+                      </div>
+                     
+                      
+                      <div class="col-sm-12">
+                      <label for="dob">Date of birth</label><br>
+                      <input type="date"  name="dob" id="edit_dob"  class="form-control">
+                      </div>
+                      <div class="col-sm-6">
+                          <label for="citzen">Citizen</label><br>
+                          <select  id="citizen" class="form-control">
+                              <option value="India">India</option>
+                              <option value="Turkey">Turkey</option>
+                              <option value="Taiwan">Taiwan</option>
+                              <option value="Pakistan">Pakistan</option>
+                              <option value="India">India</option>
+                              <option value="Turkey">Turkey</option>
+                              <option value="Taiwan">Taiwan</option>
+                              <option value="Pakistan">Pakistan</option>
+                          </select>
+                      </div>
+                      <div class="col-sm-12">
+                          <label for="">Studying</label><br>
+                          <div class="form-control">
+                             
+                              <input type="radio"  name="study" id="edit_field1" value="B.Tech"> 
+                              <label for="field1">B.Tech</label> 
+                              <input type="radio"  name="study" id="edit_field2" value="M.Tech">
+                              <label for="field2">M.Tech</label>
+                              <input type="radio" name="study" id="edit_field3" value="M.B.A">
+                              <label for="field3">M.B.A</label>
+                          </div>
+                         
+                      </div>
+                      
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <fieldset>
+                              <legend>Current Address</legend>
+          
+                             <textarea id="myText1" name="myText1"  cols="30" rows="10" class="form-control"></textarea>
+                          </fieldset>
+                       
+                      </div>
+                      <div class="col-sm-12">
+                          <fieldset>
+                              <legend>Permanant Address</legend>
+                              <textarea name="myText2" id="myText2" cols="30" rows="10" class="form-control"></textarea>
+                             <!-- <textarea name="peraddress" id="edit_permanantaddress" cols="50" rows="5" class="form-control"></textarea> -->
+                          </fieldset>
+                      </div>    
+                      
+                  </div>
+                  <div class="row ">
+                      <div class="col-sm-12 "> 
+                        <label for="">SelfIntroduction</label><br>
+                        <input type="file" name="selfintr" id="edit_file1" class="form-control">
+                      </div>
+                      <div class="col-sm-12"> 
+                          <label for="file2">Profile Pic</label><br>
+                          <input type="file" name="pic" id="edit_file2"  class="form-control">
+                      </div>
+                      <div class="col-sm-12"> 
+                          <label for="file3">Adhar Card</label><br>
+                          <input type="file" name="pic" id="edit_file3"  class="form-control">
+                      </div>
+                      <div class="col-sm-12"> 
+                          <label for="file4">Identity Card</label><br>
+                          <input type="file" name="pic" id="edit_file4"  class="form-control">
+                      </div>
+                      
+                  </div>
+                 <br>
+                  <div class="row border border-dark">
+                    <div class="col-sm-12">
+                      <span>
+                        <input type="checkbox" name="termsandcond" id="edit_termsandcond" >
+                        <p>I agree to the terms of Condition<span><sup class="text-danger">*</sup></span></p>
+                      </span>
+                    
+                      
+                  </div>
+                  </div>
+                      <div class="col-sm-12  text-center ">
+                             <button type="button" onclick="updateData()" class="btn-primary btn-lg" data-dismiss="modal">update</button>
+                             <input type="reset"  class="btn-dark btn-lg"value="Reset">
+                      </div>
+                  </div>
+                    
+                 </form>
+               </section>
+        
+            </div>
+          </div>
+        </div>
+        
+   
+      
+        <script src="js/new_script.js"></script>
+  
+  </body>
+ 
+</html>
